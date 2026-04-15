@@ -1,0 +1,25 @@
+<h2>Dashboard des Tâches ({{ totalTasks() }} au total)</h2>
+<section>
+  <h3>À faire</h3>
+  @for (task of tasksTodo(); track task.id) {
+    <article>{{ task.title }}</article>
+  } @empty {
+    <p>Aucune tâche à faire !</p>
+  }
+</section>
+<section>
+  <h3>En cours</h3>
+  @for (task of tasksInProgress(); track task.id) {
+    <article>{{ task.title }}</article>
+  } @empty {
+    <p>Rien en cours.</p>
+  }
+</section>
+<section>
+  <h3>Terminé</h3>
+  @for (task of tasksDone(); track task.id) {
+    <article>{{ task.title }}</article>
+  } @empty {
+    <p>Aucune tâche terminée.</p>
+  }
+</section>
