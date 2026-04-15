@@ -1,0 +1,19 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "phoenix-schematics": {
+      "description": "A blank schematic.",
+      "factory": "./phoenix-schematics/index#phoenixSchematics"
+    },
+    "api-service": {
+      "description": "A blank schematic.",
+      "factory": "./api-service/index#apiService",
+      "schema": "./api-service/schema.json"
+    },
+    "state-service": {
+      "description": "A blank schematic.",
+      "factory": "./state-service/index#stateService",
+      "schema": "./state-service/schema.json"
+    }
+  }
+}

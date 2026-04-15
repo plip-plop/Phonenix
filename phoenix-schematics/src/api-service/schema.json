@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "ApiServiceSchematic",
+  "title": "API Service Options",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Le nom de la feature (ex: tasks).",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    }
+  },
+  "required": ["name"]
+}

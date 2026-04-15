@@ -1,0 +1,7 @@
+--- HIGH-ORDERS OPERATORS (subscribes imbriqués) ---
+4 possibilités.
+	> switchMap : Le traitement en cours est annulé à chaque nouveau click. Initialisation d'un nouveau traitement.
+	> concatMap: Tous les clicks sont pris en compte, l'ordre est conservé.
+	> mergeMap: Tous les clicks sont pris en compte, l'ordre n'est pas conservé ("first in, first out").
+	> exhaustMap : Les nouveaux clicks sont annulés tant que le premier traitement n'est pas terminé.
+
