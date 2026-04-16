@@ -1,0 +1,56 @@
+<form [formGroup]="taskForm" (ngSubmit)="saveTask()">
+  <h3>Nouvelle tâche</h3>
+  <div class="form-field">
+    <label for="title">Titre</label>
+    <input id="title" type="text" formControlName="title" />
+
+    @if (taskForm.controls.title.touched) {
+      @if (taskForm.controls.title.hasError('required')) {
+        <small class="error">Le titre est requis.</small>
+      }
+      @if (taskForm.controls.title.hasError('minlength')) {
+        <small class="error">Le titre doit faire au moins 5 caractères. </small>
+      }
+    }
+
+    @if (
+      taskForm.controls.description.touched &&
+      taskForm.controls.description.hasError('forbiddenWord')
+    ) {
+      <small class="error">{{
+        taskForm.controls.description.errors?.['forbiddenWord'].value
+      }}</small>
+    }
+
+    @if (taskForm.controls.title.pending) {
+      <small>Vérification de l'unicité...</small>
+    }
+    @if (taskForm.controls.title.hasError('uniqueTitle')) {
+      <small class="error">Ce titre est déjà pris.</small>
+    }
+  </div>
+  <div class="form-field">
+    <label for="description">Description</label>
+    <textarea id="description" formControlName="description"></textarea>
+  </div>
+  <div class="form-field">
+    <label for="status">Statut</label>
+    <select id="status" formControlName="status">
+      <option value="TODO">À faire</option>
+      <option value="IN_PROGRESS">En cours</option>
+      <option value="DONE">Terminé</option>
+    </select>
+  </div>
+
+  <button type="submit" [disabled]="taskForm.pending || taskForm.invalid || isAdding()">
+    @if (isAdding()) {
+      <span>Sauvegarde en cours...</span>
+    } @else {
+      <span>Enregistrer</span>
+    }
+  </button>
+
+  @if (addError()) {
+    <p class="error">Erreur lors de la sauvegarde : {{ addError() }}</p>
+  }
+</form>

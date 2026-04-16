@@ -23,3 +23,8 @@
     <p>Aucune tâche terminée.</p>
   }
 </section>
+
+<button (click)="isFormVisible.set(true)">Créer une Tâche</button>
+@if (isFormVisible()) {
+  <app-task-form (taskSaved)="closeForm()" />
+}
