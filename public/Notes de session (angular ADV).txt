@@ -5,3 +5,5 @@
 	> mergeMap: Tous les clicks sont pris en compte, l'ordre n'est pas conservé ("first in, first out").
 	> exhaustMap : Les nouveaux clicks sont annulés tant que le premier traitement n'est pas terminé.
 
+--- Guide des bonnes pratiques ---
+https://angular.dev/style-guide

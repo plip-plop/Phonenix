@@ -1,10 +1,12 @@
 <h2>Dashboard des Tâches ({{ totalTasks() }} au total)</h2>
 <section>
   <h3>À faire</h3>
-  @for (task of tasksTodo(); track task.id) {
-    <article>{{ task.title }}</article>
-  } @empty {
-    <p>Aucune tâche à faire !</p>
+  @for (task of tasksState.tasksTodo(); track task.id) {
+    <article>
+      <h4>
+        <a [routerLink]="[task.id]">{{ task.title }}</a>
+      </h4>
+    </article>
   }
 </section>
 <section>

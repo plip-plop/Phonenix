@@ -44,4 +44,9 @@ export class TasksApiService {
 
     return timer(500).pipe(map(() => newTask));
   }
+
+  getById(id: string): Observable<Task | undefined> {
+    const task = MOCK_TASKS.find((task) => task.id === id);
+    return timer(300).pipe(map(() => task));
+  }
 }

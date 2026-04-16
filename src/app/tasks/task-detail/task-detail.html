@@ -1,0 +1,10 @@
+@if (task(); as task) {
+  <article>
+    <h2>Détail de la tâche : {{ task.title }}</h2>
+    <p>{{ task.description }}</p>
+    <p>Statut : {{ task.status }}</p>
+  </article>
+} @else {
+  <p>Tâche non trouvée.</p>
+}
+<a routerLink="/dashboard">Retour à la liste</a>
