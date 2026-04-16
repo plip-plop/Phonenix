@@ -1,1 +1,8 @@
-<router-outlet />
+<app-header />
+<main>
+  @if (isLoggedIn()) {
+    <app-task-list />
+  } @else {
+    <app-login />
+  }
+</main>

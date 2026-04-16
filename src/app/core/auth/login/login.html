@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()">
+  <h2>Connexion</h2>
+  <div>
+    <label for="email">Email</label>
+    <input id="email" type="email" [(ngModel)]="email" name="email" />
+  </div>
+  <div>
+    <label for="password">Mot de passe</label>
+    <input id="password" type="password" [(ngModel)]="password" name="password" />
+  </div>
+  <button type="submit" [disabled]="isLoading()">
+    @if (isLoading()) {
+      <span>Connexion...</span>
+    } @else {
+      <span>Se connecter</span>
+    }
+  </button>
+  @if (error()) {
+    <p class="error">{{ error() }}</p>
+  }
+</form>

@@ -1,0 +1,11 @@
+<header>
+  <h1>Phoenix Project 🚀</h1>
+  <div class="user-info">
+    @if (isLoggedIn()) {
+      <span>Bonjour, {{ displayName() }} !</span>
+      <button (click)="logout()">Déconnexion</button>
+    } @else {
+      <span>Bienvenue, {{ displayName() }}</span>
+    }
+  </div>
+</header>
