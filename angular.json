@@ -7,6 +7,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "phoenix-app": {
+      "i18n": {
+        "sourceLocale": "fr",
+        "locales": {
+          "en": "messages.en.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -29,11 +35,13 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ]
+            "styles": ["src/styles.scss"],
+            "polyfills": ["@angular/localize/init"]
           },
           "configurations": {
+            "en": {
+              "localize": ["en"]
+            },
             "production": {
               "budgets": [
                 {
@@ -65,6 +73,9 @@
             },
             "development": {
               "buildTarget": "phoenix-app:build:development"
+            },
+            "en": {
+              "buildTarget": "phoenix-app:build:development,en"
             }
           },
           "defaultConfiguration": "development"

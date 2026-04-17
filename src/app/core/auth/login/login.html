@@ -1,11 +1,11 @@
 <form (ngSubmit)="onSubmit()">
   <h2>Connexion</h2>
   <div>
-    <label for="email">Email</label>
+    <label for="email" i18n>Email</label>
     <input id="email" type="email" [(ngModel)]="email" name="email" />
   </div>
   <div>
-    <label for="password">Mot de passe</label>
+    <label for="password" i18n>Mot de passe</label>
     <input id="password" type="password" [(ngModel)]="password" name="password" />
   </div>
   <button type="submit" [disabled]="isLoading()">

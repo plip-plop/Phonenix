@@ -2,10 +2,26 @@
   <h1>Phoenix Project 🚀</h1>
   <div class="user-info">
     @if (isLoggedIn()) {
-      <span>Bonjour, {{ displayName() }} !</span>
-      <button (click)="logout()">Déconnexion</button>
+      <span
+        i18n="
+          Message de bienvenue pour l'utilisateur dans l'en-tête|Un message d'accueil pour
+          l'utilisateur authentifié
+        "
+        >Bonjour, {{ displayName() }} !</span
+      >
+      <button
+        (click)="logout()"
+        i18n="Texte du bouton de déconnexion|Le texte pour le bouton de déconnexion"
+      >
+        Déconnexion
+      </button>
     } @else {
-      <span>Bienvenue, {{ displayName() }}</span>
+      <span
+        i18n="
+          Message de bienvenue pour un invité|Un message d'accueil pour un visiteur non connecté
+        "
+        >Bienvenue, {{ displayName() }}</span
+      >
     }
   </div>
 </header>

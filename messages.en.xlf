@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="4768749765465246664" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/auth/login/login.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5249891717669571568" datatype="html">
+        <source>Mot de passe</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/auth/login/login.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4082513956661339871" datatype="html">
+        <source>Bonjour, <x id="INTERPOLATION" equiv-text="{{ displayName() }}"/> !</source>
+        <target>Hello, <x id="INTERPOLATION" equiv-text="{{ displayName() }}"/> !</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.html</context>
+          <context context-type="linenumber">10,12</context>
+        </context-group>
+        <note priority="1" from="description">Un message d&apos;accueil pour
+          l&apos;utilisateur authentifié</note>
+        <note priority="1" from="meaning">Message de bienvenue pour l&apos;utilisateur dans l&apos;en-tête</note>
+      </trans-unit>
+      <trans-unit id="5552956323184108430" datatype="html">
+        <source> Déconnexion </source>
+        <target> Deconnection </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.html</context>
+          <context context-type="linenumber">16,21</context>
+        </context-group>
+        <note priority="1" from="description">Le texte pour le bouton de déconnexion</note>
+        <note priority="1" from="meaning">Texte du bouton de déconnexion</note>
+      </trans-unit>
+      <trans-unit id="4774965758199449113" datatype="html">
+        <source>Bienvenue, <x id="INTERPOLATION" equiv-text="{{ displayName() }}"/></source>
+        <target>Hello, <x id="INTERPOLATION" equiv-text="{{ displayName() }}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.html</context>
+          <context context-type="linenumber">23,25</context>
+        </context-group>
+        <note priority="1" from="description">Un message d&apos;accueil pour un visiteur non connecté</note>
+        <note priority="1" from="meaning">Message de bienvenue pour un invité</note>
+      </trans-unit>
+      <trans-unit id="tasks.todoColumnHeader|Titre pour la colonne des tâches à faire" datatype="html">
+        <source>À faire</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/tasks/task-list/task-list.html</context>
+          <context context-type="linenumber">1,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tasks.inProgressColumnHeader|Titre pour la colonne des tâches en cours" datatype="html">
+        <source>En cours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/tasks/task-list/task-list.html</context>
+          <context context-type="linenumber">14,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tasks.doneColumnHeader|Titre pour la colonne des tâches terminées" datatype="html">
+        <source>Terminé</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/tasks/task-list/task-list.html</context>
+          <context context-type="linenumber">22,24</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
