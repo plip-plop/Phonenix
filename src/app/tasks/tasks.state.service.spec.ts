@@ -17,6 +17,7 @@ fdescribe('TasksStateService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
+        // On est obligé de mettre cette ligne pour gérer le Zoneless
         provideZonelessChangeDetection(),
         TasksStateService,
         { provide: TasksApiService, useValue: mockTasksApiService },
@@ -28,7 +29,7 @@ fdescribe('TasksStateService', () => {
   it('doit être créé', () => {
     expect(service).toBeTruthy();
   });
-  
+
   describe('addTask', () => {
     it('doit ajouter une tâche au state', () => {
       const newTaskData: Omit<Task, 'id'> = { title: 'Test', description: 'Desc', status: 'TODO' };
@@ -37,7 +38,9 @@ fdescribe('TasksStateService', () => {
       mockTasksApiService.addTask.and.returnValue(of(returnedTask));
       service.addTask(newTaskData).subscribe();
       expect(mockTasksApiService.addTask).toHaveBeenCalledOnceWith(newTaskData);
-      expect(service.tasks().length).toBe(1);
+
+      //   expect(service.tasks().length).toBe(1);
+      expect(service.tasks()).toHaveSize(1);
       expect(service.tasks()[0]).toEqual(returnedTask);
     });
   });
